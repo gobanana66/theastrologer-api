@@ -1,10 +1,14 @@
 from flask import Flask, jsonify, url_for
+from flask_cors import CORS, cross_origin
 from theastrologer import Horoscope, is_valid_sunsign
 
 app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 # Main Index
 @app.route('/', methods=['GET'])
+@cross_origin()
 def get_home():
     return jsonify({
             'author': 'Sandip Bhagat',
