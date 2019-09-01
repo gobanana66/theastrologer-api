@@ -5,3 +5,4 @@ six==1.10.0
 twilio==4.6.0
 Flask==0.10.1
 theastrologer==0.1.0
+flask_cors = 3.0.6

@@ -1,7 +1,9 @@
 from flask import Flask, jsonify, url_for
 from theastrologer import Horoscope, is_valid_sunsign
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 # Main Index
 @app.route('/', methods=['GET'])
